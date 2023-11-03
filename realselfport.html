@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <style type="text/css">
+    * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    transition: 0.4s;
+}
+
+.logo a {
+    text-decoration: none;
+    color:rgb(51, 51, 51);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu{
+    display:flex;
+    list-style: none;
+}
+.menu li{
+    margin-left:10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.banner{
+    background-color: darkblue;
+    color: #fff;
+    height: 600px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.banner-info{
+    text-align: center;
+}
+
+.banner-info img{
+    width: 300px;
+    border-radius: 100%;
+}
+
+main{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+}
+
+main div{
+    padding: 20px;
+}
+
+main div p{
+    margin-top: 10px;
+}
+
+main img{
+    width:100%;
+    border-radius: 20px;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding:20px;
+    text-align: center;
+}
+
+main div{
+    background-color: rgb(173, 173, 232);
+}
+ /* Next is navbar */
+
+ #navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+  transition: 0.4s; 
+  position: fixed; 
+  width: 100%;
+  top: 0; 
+  z-index: 99;
+}
+
+ #navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+    </style>
+    </head>
+
+
+    <body>
+
+        <!-- Nav Section Start -->
+        <nav>
+            <div class="navbar" id="logo">
+                <a href="#" id="logo">Mysite</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#" >Home</a></li>
+                <li><a href="#info">Information</a></li>
+                <!-- <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li> -->
+            </ul>
+        </nav>
+
+        <!-- Nav Section End-->
+
+        <!-- banner star -->
+        <section class="banner">
+            <div class="banner-info">
+                <img src="https://www.drawing123.com/wp-content/uploads/2021/11/son-goku-drawing-step-13.png" alt="">
+                <h1>My Website</h1>
+                <p>66070501027</p>
+            </div>
+        </section>
+        <!-- banner end -->
+
+
+        <!--   content start-->
+        <main>
+            <div id="info">
+                <h3>Welcome to my Informatoin</h3>
+                <p>Hello, My name is Noppanut Prasertwongsa from SEC A. My hobby is playing pingpong, GO and ROV. I hope you enjoy my website.</p><br>
+                <h3>Education</h3>
+                <li>Primary school : BRSK</li>
+                <li>High School: BRUS</li>
+                <li>Now: KMUTT</li>
+
+            </div>
+            <div>
+                <h3>Skill</h3>
+                <!-- <img src="http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRq1mQLx2tcZ4owspN_OxqcHZBIc0f1F6NfiqBYgGnwEkdc3tbUGKETWmBH2PNppLs-dJJAt92vs2I16Eno7ks" alt="" > -->
+                <ol>Python</ol>
+                <ol>R</ol>
+                <ol>Math</ol><br>
+                <h3>Contact</h3>
+                <a href="https://instagram.com/np_wai?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">Chick IG</a>
+            </div>
+            <div>
+                <h3>Test JS</h3>
+                <p>I do a function as  following</p>
+                <button onclick="randomnum();"> Click me Java Script</button>
+                <!-- <button onclick="dosomething();"> Click me do something</button> -->
+                <p id ="random">ranint</p>
+
+                <script>
+                function randomnum(){
+                document.getElementById("random").innerHTML = Math.floor(Math.random()*10);
+                }
+                </script>
+            </div>
+        </main>
+        <!-- content end -->
+
+        <!-- footer start -->
+        <footer>
+            <p>Copyright 2023, Made by Wai</p>
+        </footer>
+        <!-- footer stop -->
+
+        
+          <script>
+            window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "20px 10px";
+    document.getElementById("logo").style.fontSize = "0px";
+  } else {
+    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("logo").style.fontSize = "20px";
+  }
+}
+
+          </script>
+          
+        
+    
+    </body>
+</html>
